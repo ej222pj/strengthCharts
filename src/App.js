@@ -16,7 +16,6 @@ class App extends Component {
     this.state = { exerciseTab: 0 };
   }
 
-
   render() {
     return (
       <div className="App">
@@ -30,19 +29,21 @@ class App extends Component {
                 <Tab className="tabHeader">Power Clean</Tab>
                 <Tab className="tabHeader">Power Snatch</Tab>
               </Tabs>
-              <div className="kiloToPounds">
-                <Switch  onChange={() => {this.setState({pounds: !this.state.pounds})}} ripple id="kToP" defaultChecked>
-                {this.state.pounds ? <p className="converter">Pounds</p>: <p className="converter">Kilos</p>}
-                </Switch>
-              </div>
-              <div style={{width: '100%'}}>
-                {this.state.exerciseTab === 0 ? <Bench pounds={this.state.pounds} /> : null}
-                {this.state.exerciseTab === 1 ? <Deadlift pounds={this.state.pounds} /> : null}
-                {this.state.exerciseTab === 2 ? <Squat pounds={this.state.pounds} /> : null}
-                {this.state.exerciseTab === 3 ? <Press pounds={this.state.pounds} /> : null}
-                {this.state.exerciseTab === 4 ? <PowerClean pounds={this.state.pounds} /> : null}
-                {this.state.exerciseTab === 5 ? <PowerSnatch pounds={this.state.pounds} /> : null}
-              </div>
+            </div>
+              <div className="weightTables">
+                <div className="kiloToPounds">
+                  <Switch  onChange={() => {this.setState({pounds: !this.state.pounds})}} ripple id="kToP" defaultChecked>
+                  {this.state.pounds ? <p className="converter">Pounds</p>: <p className="converter">Kilos</p>}
+                  </Switch>
+                </div>
+                <div style={{width: '100%'}}>
+                  {this.state.exerciseTab === 0 ? <Bench pounds={this.state.pounds} /> : null}
+                  {this.state.exerciseTab === 1 ? <Deadlift pounds={this.state.pounds} /> : null}
+                  {this.state.exerciseTab === 2 ? <Squat pounds={this.state.pounds} /> : null}
+                  {this.state.exerciseTab === 3 ? <Press pounds={this.state.pounds} /> : null}
+                  {this.state.exerciseTab === 4 ? <PowerClean pounds={this.state.pounds} /> : null}
+                  {this.state.exerciseTab === 5 ? <PowerSnatch pounds={this.state.pounds} /> : null}
+                </div>
               </div>
             </div>
         </div>

@@ -36,10 +36,9 @@ export default class Pullup extends Component {
 
   render() {
     return (
-      <div style={{margin: '0 auto'}}>
-      <p>Your 1 rep max should be about the same as bench(including your own bw)</p>
-        <div style={{width: 'auto', margin: '3px'}}>
-          <h4 style={{margin: '0 auto'}}>Male Pull Up</h4>
+      <div className="weightTables">
+        <div className="tableStyle">
+          <h4>Male Pull Up</h4>
           <MaleBase
             userWeight={this.convertToPounds(this.state.maleWeight)}
             untrained={this.convertToPounds(this.state.mUntrained)}
@@ -50,8 +49,8 @@ export default class Pullup extends Component {
             />
         </div>
 
-        <div style={{width: 'auto', margin: '3px'}}>
-          <h4 style={{margin: '0 auto'}}>Female Pull Up</h4>
+        <div className="tableStyle">
+          <h4>Female Pull Up</h4>
           <FemaleBase
             userWeight={this.convertToPounds(this.state.femaleWeight)}
             untrained={this.convertToPounds(this.state.fUntrained)}

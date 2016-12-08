@@ -35,9 +35,9 @@ export default class Deadlift extends Component {
 
   render() {
     return (
-      <div style={{margin: '0 auto'}}>
-        <div style={{width: 'auto', margin: '3px'}}>
-          <h4 style={{margin: '0 auto'}}>Male Deadlift</h4>
+      <div className="weightTables">
+        <div className="tableStyle">
+          <h4>Male Deadlift</h4>
           <MaleBase
             userWeight={this.convertToPounds(this.state.maleWeight)}
             untrained={this.convertToPounds(this.state.mUntrained)}
@@ -48,8 +48,8 @@ export default class Deadlift extends Component {
             />
         </div>
 
-        <div style={{width: 'auto', margin: '3px'}}>
-          <h4 style={{margin: '0 auto'}}>Female Deadlift</h4>
+        <div className="tableStyle">
+          <h4>Female Deadlift</h4>
           <FemaleBase
             userWeight={this.convertToPounds(this.state.femaleWeight)}
             untrained={this.convertToPounds(this.state.fUntrained)}
