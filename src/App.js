@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <div className="content">
             <div className="exercise-tabs">
-              <Tabs activeTab={this.state.exerciseTab} onChange={(tabId) => this.setState({ exerciseTab: tabId })} ripple>
+              <Tabs className="tabHeader" activeTab={this.state.exerciseTab} onChange={(tabId) => this.setState({ exerciseTab: tabId })} ripple>
                 <Tab>Bench</Tab>
                 <Tab>Squat</Tab>
                 </Tabs>
