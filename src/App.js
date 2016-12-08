@@ -21,9 +21,9 @@ class App extends Component {
                 <Tab>Bench</Tab>
                 <Tab>Squat</Tab>
                 </Tabs>
-              <section>
+              <div style={{width: '100%'}}>
                 {this.state.exerciseTab === 1 ? <Squat /> : null}
-              </section>
+              </div>
               </div>
             </div>
         </div>

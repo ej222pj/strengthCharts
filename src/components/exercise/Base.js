@@ -3,17 +3,21 @@ import { DataTable, TableHeader } from 'react-mdl';
 
 const Base = ({ userWeight }) => (
   <DataTable
+    style={{margin: '0 auto'}}
     shadow={0}
     rows={[
-        {material: 'Acrylic (Transparent)', quantity: userWeight[0], price: 2.90},
-        {material: 'Plywood (Birch)', quantity: 50, price: 1.25},
-        {material: 'Laminate (Gold on Blue)', quantity: 10, price: 2.35}
+        {bodyweight: userWeight[0], untrained: 0, novice: 0, intermediate: 0, advanced: 0, elite: 0},
+        {bodyweight: userWeight[1], untrained: 0, novice: 0, intermediate: 0, advanced: 0, elite: 0}
     ]}
   >
 
-  <TableHeader name="material" tooltip="The amazing material name">Material</TableHeader>
-  <TableHeader numeric name="quantity" tooltip="Number of materials">Quantity</TableHeader>
-  <TableHeader numeric name="price" cellFormatter={(price) => `\$${price.toFixed(2)}`} tooltip="Price pet unit">Price</TableHeader>
+  <TableHeader numeric name="bodyweight" tooltip="Your Body Weight">Body Weight</TableHeader>
+  <TableHeader numeric name="untrained" tooltip="Never tried the exercise">Untrained</TableHeader>
+  <TableHeader numeric name="novice" tooltip="Done the exercise for some months">Novice</TableHeader>
+  <TableHeader numeric name="intermediate" tooltip="Done the exercise for a couple of years">Intermediate</TableHeader>
+  <TableHeader numeric name="advanced" tooltip="Done the exercise for multiple years">Advanced</TableHeader>
+  <TableHeader numeric name="elite" tooltip="Athlete competing in the sport">Elite</TableHeader>
+
 </DataTable>
 );
 
