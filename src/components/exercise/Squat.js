@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Base from './Base';
+import MaleBase from './MaleBase';
+import FemaleBase from './FemaleBase';
+
 
 export default class Squat extends Component {
   constructor(props) {
      super(props);
      this.state = {
-       maleWeight: [52.2, 56, 60, 67, 75, 82, 90, 100, 110, 125, 145, "Over"],
-       femaleWeight: [44, 48, 52, 56, 60, 67, 75, 82, 90, "Over"],
+       maleWeight: [52, 56, 60, 67, 75, 82, 90, 100, 110, 125, 145, 145],
+       femaleWeight: [44, 48, 52, 56, 60, 67, 75, 82, 90, 90],
        mUntrained: [35, 37.5, 40, 45, 50, 55, 57.5, 60, 62.5, 65, 67.5, 70],
        fUntrained: [20, 22.5, 25, 25, 27.5, 30, 32.5, 35, 37.5, 40],
        mNovice: [65, 70, 77.5, 85, 92.5, 100, 105, 110, 115, 117.5, 122.5, 125],
@@ -20,16 +22,24 @@ export default class Squat extends Component {
     };
    }
 
-  render() {
-//{bodyweight: userWeight[0], untrained: 0, novice: 0,
-// intermediate: 0, advanced: 0, elite: 0},
+   convertToPounds(stateArr) {
+     if(this.props.pounds) {
+       let arr = [];
+       stateArr.forEach(function(element) {
+         arr.push(Math.round(element * 2.2046))
+       });
+       return arr;
+     }
+     return stateArr;
+   }
 
+  render() {
     return (
       <div style={{margin: '0 auto'}}>
         <div style={{width: 'auto', margin: '3px'}}>
           <h4 style={{margin: '0 auto'}}>Male Squat</h4>
-          <Base
-            userWeight={this.state.maleWeight}
+          <MaleBase
+            userWeight={this.convertToPounds(this.state.maleWeight)}
             untrained={this.state.mUntrained}
             novice={this.state.mNovice}
             intermediate={this.state.mIntermediate}
@@ -40,7 +50,7 @@ export default class Squat extends Component {
 
         <div style={{width: 'auto', margin: '3px'}}>
           <h4 style={{margin: '0 auto'}}>Female Squat</h4>
-          <Base
+          <FemaleBase
             userWeight={this.state.femaleWeight}
             untrained={this.state.fUntrained}
             novice={this.state.fNovice}

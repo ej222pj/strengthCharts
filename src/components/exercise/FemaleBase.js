@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { DataTable, TableHeader } from 'react-mdl';
 
-const Base = ({ userWeight, untrained, novice, intermediate, advanced, elite }) => (
+const FemaleBase = ({ userWeight, untrained, novice, intermediate, advanced, elite }) => (
   <DataTable
     style={{margin: '0 auto'}}
     shadow={0}
@@ -15,23 +15,21 @@ const Base = ({ userWeight, untrained, novice, intermediate, advanced, elite }) 
         {bodyweight: userWeight[6], untrained: untrained[6], novice: novice[6], intermediate: intermediate[6], advanced: advanced[6], elite: elite[6]},
         {bodyweight: userWeight[7], untrained: untrained[7], novice: novice[7], intermediate: intermediate[7], advanced: advanced[7], elite: elite[7]},
         {bodyweight: userWeight[8], untrained: untrained[8], novice: novice[8], intermediate: intermediate[8], advanced: advanced[8], elite: elite[8]},
-        {bodyweight: userWeight[9], untrained: untrained[9], novice: novice[9], intermediate: intermediate[9], advanced: advanced[9], elite: elite[9]},
-        {bodyweight: userWeight[10], untrained: untrained[10], novice: novice[10], intermediate: intermediate[10], advanced: advanced[10], elite: elite[10]},
-        {bodyweight: userWeight[11], untrained: untrained[11], novice: novice[11], intermediate: intermediate[11], advanced: advanced[11], elite: elite[11]}
+        {bodyweight: userWeight[9] + "+", untrained: untrained[9], novice: novice[9], intermediate: intermediate[9], advanced: advanced[9], elite: elite[9]}
     ]}
   >
 
-  <TableHeader numeric name="bodyweight" tooltip="Your Body Weight">Body Weight</TableHeader>
-  <TableHeader numeric name="untrained" tooltip="Never tried the exercise">Untrained</TableHeader>
-  <TableHeader numeric name="novice" tooltip="Done the exercise for some months">Novice</TableHeader>
-  <TableHeader numeric name="intermediate" tooltip="Done the exercise for a couple of years">Intermediate</TableHeader>
-  <TableHeader numeric name="advanced" tooltip="Done the exercise for multiple years">Advanced</TableHeader>
-  <TableHeader numeric name="elite" tooltip="Athlete competing in the sport">Elite</TableHeader>
+  <TableHeader className="bwCol" numeric name="bodyweight" tooltip="Your Body Weight">Body Weight</TableHeader>
+  <TableHeader className="levelHeader" numeric name="untrained" tooltip="Never tried the exercise">Untrained</TableHeader>
+  <TableHeader className="levelHeader" numeric name="novice" tooltip="Done the exercise for some months">Novice</TableHeader>
+  <TableHeader className="levelHeader" numeric name="intermediate" tooltip="Done the exercise for a couple of years">Intermediate</TableHeader>
+  <TableHeader className="levelHeader" numeric name="advanced" tooltip="Done the exercise for multiple years">Advanced</TableHeader>
+  <TableHeader className="levelHeader" numeric name="elite" tooltip="Athlete competing in the sport">Elite</TableHeader>
 
 </DataTable>
 );
 
-Base.propTypes = {
+FemaleBase.propTypes = {
   userWeight: PropTypes.array,
   untrained: PropTypes.array,
   novice: PropTypes.array,
@@ -40,4 +38,4 @@ Base.propTypes = {
   elite: PropTypes.array,
 }
 
-export default Base;
+export default FemaleBase;

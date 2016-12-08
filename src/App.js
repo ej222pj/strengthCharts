@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Tabs, Tab } from 'react-mdl';
+import { Tabs, Tab, Switch } from 'react-mdl';
 import Squat from './components/exercise/Squat';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = { exerciseTab: 0 };
+    this.state = { pounds: false };
   }
 
 
@@ -18,11 +19,16 @@ class App extends Component {
         <div className="content">
             <div className="exercise-tabs">
               <Tabs className="tabHeader" activeTab={this.state.exerciseTab} onChange={(tabId) => this.setState({ exerciseTab: tabId })} ripple>
-                <Tab>Bench</Tab>
-                <Tab>Squat</Tab>
-                </Tabs>
+                <Tab className="tabHeader">Bench</Tab>
+                <Tab className="tabHeader">Squat</Tab>
+              </Tabs>
+              <div className="kiloToPounds">
+                <Switch  onChange={() => {this.setState({pounds: !this.state.pounds})}} ripple id="kToP" defaultChecked>
+                {this.state.pounds ? <p>Pounds</p>: <p>Kilos</p>}
+                </Switch>
+              </div>
               <div style={{width: '100%'}}>
-                {this.state.exerciseTab === 1 ? <Squat /> : null}
+                {this.state.exerciseTab === 1 ? <Squat pounds={this.state.pounds} /> : null}
               </div>
               </div>
             </div>
