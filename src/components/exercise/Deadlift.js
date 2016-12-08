@@ -3,22 +3,22 @@ import MaleBase from './base/MaleBase';
 import FemaleBase from './base/FemaleBase';
 
 
-export default class Bench extends Component {
+export default class Deadlift extends Component {
   constructor(props) {
      super(props);
      this.state = {
        maleWeight: [52, 56, 60, 67, 75, 82, 90, 100, 110, 125, 145, 145],
        femaleWeight: [44, 48, 52, 56, 60, 67, 75, 82, 90, 90],
-       mUntrained: [38, 40, 45, 50, 55, 60, 63, 63, 65, 68, 70, 73],
-       fUntrained: [23, 25, 28, 30, 33, 35, 38, 38, 40, 43],
-       mNovice: [50, 53, 58, 65, 70, 75, 80, 83, 85, 88, 90, 93],
-       fNovice: [30, 33, 35, 38, 40, 40, 43, 50, 53, 55],
-       mIntermediate: [60, 63, 70, 78, 85, 90, 98, 103, 105, 108, 113, 115],
-       fIntermediate: [35, 38, 38, 40, 43, 48, 53, 55, 60, 63],
-       mAdvanced: [83, 90, 95, 108, 115, 125, 133, 138, 143, 148, 153, 155],
-       fAdvanced: [43, 45, 50, 53, 58, 63, 65, 73, 75, 80],
-       mElite: [100, 110, 118, 133, 145, 158, 163, 173, 180, 185, 190, 193],
-       fElite: [53, 58, 63, 65, 68, 75, 85, 90, 95, 100]
+       mUntrained: [43, 48, 50, 58, 63, 68, 70, 75, 78, 80, 83, 85],
+       fUntrained: [25, 28, 30, 33, 35, 38, 40, 43, 45, 50],
+       mNovice: [83, 88, 95, 108, 115, 125, 133, 138, 145, 148, 153, 155],
+       fNovice: [48, 53, 55, 60, 63, 68, 73, 80, 88, 90],
+       mIntermediate: [93, 100, 110, 123, 135, 143, 153, 160, 165, 170, 173, 178],
+       fIntermediate: [50, 60, 63, 68, 73, 80, 85, 93, 98, 105],
+       mAdvanced: [135, 145, 155, 173, 185, 200, 208, 218, 223, 228, 230, 233],
+       fAdvanced: [80, 85, 90, 95, 100, 110, 118, 125, 130, 138],
+       mElite: [175, 188, 200, 218, 235, 250, 258, 265, 270, 273, 278, 280],
+       fElite: [105, 110, 115, 120, 125, 135, 145, 150, 160, 165]
     };
    }
 
@@ -37,7 +37,7 @@ export default class Bench extends Component {
     return (
       <div style={{margin: '0 auto'}}>
         <div style={{width: 'auto', margin: '3px'}}>
-          <h4 style={{margin: '0 auto'}}>Male Squat</h4>
+          <h4 style={{margin: '0 auto'}}>Male Deadlift</h4>
           <MaleBase
             userWeight={this.convertToPounds(this.state.maleWeight)}
             untrained={this.convertToPounds(this.state.mUntrained)}
@@ -49,7 +49,7 @@ export default class Bench extends Component {
         </div>
 
         <div style={{width: 'auto', margin: '3px'}}>
-          <h4 style={{margin: '0 auto'}}>Female Squat</h4>
+          <h4 style={{margin: '0 auto'}}>Female Deadlift</h4>
           <FemaleBase
             userWeight={this.convertToPounds(this.state.femaleWeight)}
             untrained={this.convertToPounds(this.state.fUntrained)}
