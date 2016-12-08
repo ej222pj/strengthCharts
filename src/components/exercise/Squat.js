@@ -40,23 +40,23 @@ export default class Squat extends Component {
           <h4 style={{margin: '0 auto'}}>Male Squat</h4>
           <MaleBase
             userWeight={this.convertToPounds(this.state.maleWeight)}
-            untrained={this.state.mUntrained}
-            novice={this.state.mNovice}
-            intermediate={this.state.mIntermediate}
-            advanced={this.state.mAdvanced}
-            elite={this.state.mElite}
+            untrained={this.convertToPounds(this.state.mUntrained)}
+            novice={this.convertToPounds(this.state.mNovice)}
+            intermediate={this.convertToPounds(this.state.mIntermediate)}
+            advanced={this.convertToPounds(this.state.mAdvanced)}
+            elite={this.convertToPounds(this.state.mElite)}
             />
         </div>
 
         <div style={{width: 'auto', margin: '3px'}}>
           <h4 style={{margin: '0 auto'}}>Female Squat</h4>
           <FemaleBase
-            userWeight={this.state.femaleWeight}
-            untrained={this.state.fUntrained}
-            novice={this.state.fNovice}
-            intermediate={this.state.fIntermediate}
-            advanced={this.state.fAdvanced}
-            elite={this.state.fElite}
+            userWeight={this.convertToPounds(this.state.femaleWeight)}
+            untrained={this.convertToPounds(this.state.fUntrained)}
+            novice={this.convertToPounds(this.state.fNovice)}
+            intermediate={this.convertToPounds(this.state.fIntermediate)}
+            advanced={this.convertToPounds(this.state.fAdvanced)}
+            elite={this.convertToPounds(this.state.fElite)}
             />
         </div>
       </div>

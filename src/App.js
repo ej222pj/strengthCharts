@@ -24,7 +24,7 @@ class App extends Component {
               </Tabs>
               <div className="kiloToPounds">
                 <Switch  onChange={() => {this.setState({pounds: !this.state.pounds})}} ripple id="kToP" defaultChecked>
-                {this.state.pounds ? <p>Pounds</p>: <p>Kilos</p>}
+                {this.state.pounds ? <p className="converter">Pounds</p>: <p className="converter">Kilos</p>}
                 </Switch>
               </div>
               <div style={{width: '100%'}}>
