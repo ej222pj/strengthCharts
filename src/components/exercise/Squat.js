@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MaleBase from './base/MaleBase';
 import FemaleBase from './base/FemaleBase';
-
+import convertToPounds from '../helpers/Bench';
 
 export default class Bench extends Component {
   constructor(props) {
@@ -22,16 +22,11 @@ export default class Bench extends Component {
     };
    }
 
-   convertToPounds(stateArr) {
-     if(this.props.pounds) {
-       let arr = [];
-       stateArr.forEach(function(element) {
-         arr.push(Math.round(element * 2.2046))
-       });
-       return arr;
-     }
-     return stateArr;
-   }
+  convertToPounds(stateArr) {
+    const doConvert = this.props.pounds;
+    const convertHelper = new convertToPounds();
+    return convertHelper.convert(stateArr, doConvert);
+  }
 
   render() {
     return (
