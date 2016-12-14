@@ -11,12 +11,10 @@
     "react-mdl": "^1.8.0"
   },
   "scripts": {
+    "postinstall": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "engines": {
-    "node": "6.8.1"
   }
 }
