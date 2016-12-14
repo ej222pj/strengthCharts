@@ -1,16 +1,25 @@
 {
-  "name": "strengthCharts",
-  "version": "1.1.0",
-  "private": true,
+  "name": "strength-charts",
+  "version": "1.2.0",
   "main": "server.js",
-  "devDependencies": {
-    "now": "^0.36.2",
-    "now-serve": "^0.5.1",
-    "react-scripts": "0.8.1",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-hot-middleware": "^2.10.0"
+  "description": "Strength charts to compare your strenght against other",
+  "keywords": ["educational", "react", "node", "javascript", "strength", "charts"],
+  "author": "Eric Sjöström Jennerstrand",
+  "license": "ISC",
+  "contributors": [{
+    "name": "Eric Sjöström Jennerstrand", 
+    "email": "ej222pj@student.lnu.se", 
+    "url": "https://github.com/ej222pj"
+    }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ej222pj/strengthCharts.git"
   },
+  "bugs": {
+    "url": "https://github.com/ej222pj/strengthCharts/issues",
+    "email" : "ej222pj@student.lnu.se"
+  },
+  "homepage": "https://strength-charts.herokuapp.com/",
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
@@ -32,5 +41,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "now": "^0.36.2",
+    "now-serve": "^0.5.1",
+    "react-scripts": "0.8.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
   }
 }
