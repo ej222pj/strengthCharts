@@ -58,12 +58,12 @@ class App extends Component {
                   {this.state.exerciseTab === 5 ? <PowerSnatch pounds={doConvert} /> : null}
                 </div>
                 <div className="imagesPlaceholder">
-                  {this.state.exerciseTab === 0 ? <img src={BenchImage} className='exerciseImage' alt='How to do Bench Press'/> : null}
-                  {this.state.exerciseTab === 1 ? <img src={DeadliftImage} className='exerciseImage' alt='How to do Deadlift'/> : null}
-                  {this.state.exerciseTab === 2 ? <img src={SquatImage} className='exerciseImage' alt='How to do Squat'/> : null}
-                  {this.state.exerciseTab === 3 ? <img src={PressImage} className='exerciseImage' alt='How to do Press'/> : null}
-                  {this.state.exerciseTab === 4 ? <img src={CleanImage} className='exerciseImage' alt='How to do Power Clean'/> : null}
-                  {this.state.exerciseTab === 5 ? <img src={SnatchImage} className='exerciseImage' alt='How to do Power Snatch'/> : null}
+                  {this.state.exerciseTab === 0 ? <a href={BenchImage}><img src={BenchImage} className='exerciseImage' alt='How to do Bench Press'/></a> : null}
+                  {this.state.exerciseTab === 1 ? <a href={DeadliftImage}><img src={DeadliftImage} className='exerciseImage' alt='How to do Deadlift'/></a> : null}
+                  {this.state.exerciseTab === 2 ? <a href={SquatImage}><img src={SquatImage} className='exerciseImage' alt='How to do Squat'/></a> : null}
+                  {this.state.exerciseTab === 3 ? <a href={PressImage}><img src={PressImage} className='exerciseImage' alt='How to do Press'/></a> : null}
+                  {this.state.exerciseTab === 4 ? <a href={CleanImage}><img src={CleanImage} className='exerciseImage' alt='How to do Power Clean'/></a> : null}
+                  {this.state.exerciseTab === 5 ? <a href={SnatchImage}><img src={SnatchImage} className='exerciseImage' alt='How to do Power Snatch'/></a>: null}
 
                 </div>
               </div>
