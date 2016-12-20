@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://strength-charts.herokuapp.com//sitemap.xml
