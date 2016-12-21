@@ -37,12 +37,13 @@ class App extends Component {
               </Tabs>
             </div>
               <div className="weightTables">
+                
+                <div className="information">
                 <div className="kiloToPounds">
                   <Switch  onChange={() => {this.setState({pounds: !doConvert})}} ripple id="kToP" defaultChecked>
                   {doConvert ? <p className="converter">Pounds</p>: <p className="converter">Kilos</p>}
                   </Switch>
                 </div>
-                <div className="information">
                   <div className="informationPart"><h5>Untrained: </h5><p>Never tried the exercise!</p></div>
                   <div className="informationPart"><h5>Novice: </h5><p>Done the exercise for some months!</p></div>
                   <div className="informationPart"><h5>Intermediate: </h5><p>Done the exercise for a couple of years!</p></div>
@@ -64,7 +65,6 @@ class App extends Component {
                   {this.state.exerciseTab === 3 ? <a href={PressImage}><img src={PressImage} className='exerciseImage' alt='How to do Press'/></a> : null}
                   {this.state.exerciseTab === 4 ? <a href={CleanImage}><img src={CleanImage} className='exerciseImage' alt='How to do Power Clean'/></a> : null}
                   {this.state.exerciseTab === 5 ? <a href={SnatchImage}><img src={SnatchImage} className='exerciseImage' alt='How to do Power Snatch'/></a>: null}
-
                 </div>
               </div>
             </div>

@@ -1,31 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <title>Strength Charts - Strength Tables</title>
-    <meta name="description" content="Strength Tables and Strenght Charts showing strength level for all body weights and strength levels. For both Male and Female."/>
-    <meta name="author" content="Eric Sjöström Jennerstrand"/>
-    <meta name="keywords" content="Strenght, strength-charts, strength-tables, charts, tables, gym, bench, bench press, squat, deadlift, press, clean, power clean, power snatch, snatch, 1rm, one rep max, workout, training, exercise, strongman, powerlifter">
-    <meta name="application-name" content="Strenght Charts, Strength Tables"/>    
-    <link rel="canonical" href="https://strength-charts.herokuapp.com" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Strength Tables - Strength Charts" />
-    <meta property="og:description" content="Strength Tables showing strength level for all body weights and strength levels. For both Male and Female." />
-    <meta property="og:url" content="https://strength-charts.herokuapp.com" />
-    <meta property="og:site_name" content="Strength Tables" />
-    <meta property="og:image" content="https://strength-charts.herokuapp.com/images/Bench.png" />
-    <meta name="google-site-verification" content="UdT5Elyf0tMwYrUG1F82NHVYSBRPHYbKmF8HKTHL-Ko" />
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <script src="/bundle.js"></script>
-    <script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <title>Strength Charts - Strength Tables - Strenght Level</title>
+  <meta name="description" content="Strength Tables and Strenght Charts showing strength level for all body weights and strength levels. For both Male and Female."/>
+  <meta name="author" content="Eric Sjöström Jennerstrand" />
+  <meta name="keywords" content="Strenght, strength-charts, strength-tables, strenght-level, charts, tables, level, gym, bench, bench press, squat, deadlift, press, clean, power clean, power snatch, snatch, 1rm, one rep max, workout, training, exercise, strongman, powerlifter">
+  <meta name="application-name" content="Strenght Charts, Strength Tables" />
+  <link rel="canonical" href="https://strength-charts.herokuapp.com" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Strength Tables - Strength Charts" />
+  <meta property="og:description" content="Strength Tables showing strength level for all body weights and strength levels. For both Male and Female."
+  />
+  <meta property="og:url" content="https://strength-charts.herokuapp.com" />
+  <meta property="og:site_name" content="Strength Tables" />
+  <meta property="og:image" content="https://strength-charts.herokuapp.com/images/Bench.png" />
+  <meta name="google-site-verification" content="UdT5Elyf0tMwYrUG1F82NHVYSBRPHYbKmF8HKTHL-Ko" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="generalInformation">
+    <div class="exerciseLinks">
+      <p class="generalInformation">Find more infomation about how to do these move correct here:</p>
+
+
+      <div class="exerciseLink">
+        <p class="generalInformation">For <b>Bench Press:</b> </p>
+        <a href="http://www.bodybuilding.com/exercises/detail/view/name/barbell-bench-press-medium-grip" class="generalInformation">Link</a>
+      </div>
+
+      <div class="exerciseLink">
+        <p class="generalInformation">For <b>Deadlift:</b> </p>
+        <a href="http://www.bodybuilding.com/exercises/detail/view/name/barbell-deadlift" class="generalInformation">Link</a>
+      </div>
+
+      <div class="exerciseLink">
+        <p class="generalInformation">For <b>Squat:</b> </p>
+        <a href="http://www.bodybuilding.com/exercises/detail/view/name/barbell-full-squat" class="generalInformation">Link</a>
+      </div>
+
+      <div class="exerciseLink">
+        <p class="generalInformation">For <b>Press:</b> </p>
+        <a href="http://www.bodybuilding.com/exercises/detail/view/name/push-press" class="generalInformation">Link</a>
+      </div>
+
+      <div class="exerciseLink">
+        <p class="generalInformation">For <b>Power Clean:</b> </p>
+        <a href="http://www.bodybuilding.com/exercises/detail/view/name/power-clean" class="generalInformation">Link</a>
+      </div>
+
+      <div class="exerciseLink">
+        <p class="generalInformation">For <b>Power Snatch:</b> </p>
+        <a href="http://www.bodybuilding.com/exercises/detail/view/name/power-snatch" class="generalInformation">Link</a>
+      </div>
+
+    </div>
+
+    <div id="otherGeneralInformation">
+      <p class="generalInformation">The weight shown here are for one max repetition (1RM). Strength levels are an average value calculated from a database where adult lifters can input there own strength levels.<p>
+      <p class="generalInformation">These exercise should be performed with correct form, full range of motion (ROM) and without any assisting training gear except for lifting belt.</p>
+    </div>
+  </div>
+
+
+
+  <script src="/bundle.js"></script>
+  <script>
       (function(i,s,o,g,r,a,m) {
         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
           (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date(); 
@@ -38,5 +86,6 @@
       ga('create', 'UA-89046502-1', 'auto');
       ga('send', 'pageview');
     </script>
-  </body>
+</body>
+
 </html>
