@@ -25,40 +25,73 @@
   border-bottom: 1px solid black;
 }
 
-.kiloToPounds {
-  margin-top: 50px;
-  margin-left: 40%;
-  width: 50px;
-}
-
-.converter{
-  font-size: 20px;
-}
-
-.weightTables{
+.weightTables {
   margin: 0 auto;
   text-align: center;
 }
 
-.tableStyle{
+.tables {
+  width: 100%;
+  float: left;
+}
+
+.tableStyle {
   width: auto;
-  margin: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
   display: inline-block;
 }
 
-.information{
-  margin-top: 5px;
+.imagesPlaceholder {
+  margin: 0;
+}
+
+.exerciseImage {
+  width: 400px;
+  height: 200px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
-.informationPart{
+.information {
+  margin-top: 50px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.kiloToPounds {
+  margin: 0;
+  padding: 0;
+  margin-right: 40px;
+  display: inline-block;
+}
+
+.kToP {
+  margin: 0;
+  padding: 0;
+}
+
+.converter {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  font-size: 20px;
+}
+
+.informationPart {
   margin: 0;
   padding: 0;
   margin-left: 15px;
   display: inline-block;
 }
 
-h5{
+.informationPart p {
+  margin: 0;
+}
+
+h4 {
+  margin: 0 !IMPORTANT;
+}
+
+h5 {
   margin: 0 !IMPORTANT;
   padding: 0 !IMPORTANT;
   float: left;

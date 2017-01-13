@@ -2,4 +2,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #f9f9f9;
 }
+
+#generalInformation {
+  margin-top: 5px;
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.exerciseLinks {
+  border-right: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px;
+  float: left;
+}
+
+.exerciseLink {
+}
+
+.generalInformation {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  display: inline-block;
+}
+
+#otherGeneralInformation {
+  padding: 10px;
+  float: left;
+}
+

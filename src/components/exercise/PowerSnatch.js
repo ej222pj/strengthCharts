@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MaleBase from './base/MaleBase';
 import FemaleBase from './base/FemaleBase';
-import convertToPounds from '../helpers/Bench';
+import convertToPounds from '../helpers/Converter';
 
 export default class PowerSnatch extends Component {
   constructor(props) {

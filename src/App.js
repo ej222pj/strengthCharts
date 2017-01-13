@@ -7,7 +7,12 @@ import Deadlift from './components/exercise/Deadlift';
 import Press from './components/exercise/Press';
 import PowerClean from './components/exercise/PowerClean';
 import PowerSnatch from './components/exercise/PowerSnatch';
-
+const BenchImage = '/images/Bench.png';
+const DeadliftImage = '/images/Deadlift.png';
+const SquatImage = '/images/Squat.png';
+const PressImage = '/images/Press.png';
+const CleanImage = '/images/Clean.jpg';
+const SnatchImage = '/images/Snatch.png';
 
 class App extends Component {
   constructor(props) {
@@ -32,25 +37,34 @@ class App extends Component {
               </Tabs>
             </div>
               <div className="weightTables">
+                
+                <div className="information">
                 <div className="kiloToPounds">
                   <Switch  onChange={() => {this.setState({pounds: !doConvert})}} ripple id="kToP" defaultChecked>
                   {doConvert ? <p className="converter">Pounds</p>: <p className="converter">Kilos</p>}
                   </Switch>
                 </div>
-                <div className="information">
                   <div className="informationPart"><h5>Untrained: </h5><p>Never tried the exercise!</p></div>
                   <div className="informationPart"><h5>Novice: </h5><p>Done the exercise for some months!</p></div>
                   <div className="informationPart"><h5>Intermediate: </h5><p>Done the exercise for a couple of years!</p></div>
                   <div className="informationPart"><h5>Advanced: </h5><p>Done the exercise for multiple years!</p></div>
                   <div className="informationPart"><h5>Elite: </h5><p>Athlete competing in the sport!</p></div>
                 </div>
-                <div style={{width: '100%'}}>
+                <div className="tables">
                   {this.state.exerciseTab === 0 ? <Bench pounds={doConvert} /> : null}
                   {this.state.exerciseTab === 1 ? <Deadlift pounds={doConvert} /> : null}
                   {this.state.exerciseTab === 2 ? <Squat pounds={doConvert} /> : null}
                   {this.state.exerciseTab === 3 ? <Press pounds={doConvert} /> : null}
                   {this.state.exerciseTab === 4 ? <PowerClean pounds={doConvert} /> : null}
                   {this.state.exerciseTab === 5 ? <PowerSnatch pounds={doConvert} /> : null}
+                </div>
+                <div className="imagesPlaceholder">
+                  {this.state.exerciseTab === 0 ? <a href={BenchImage}><img src={BenchImage} className='exerciseImage' alt='How to do Bench Press'/></a> : null}
+                  {this.state.exerciseTab === 1 ? <a href={DeadliftImage}><img src={DeadliftImage} className='exerciseImage' alt='How to do Deadlift'/></a> : null}
+                  {this.state.exerciseTab === 2 ? <a href={SquatImage}><img src={SquatImage} className='exerciseImage' alt='How to do Squat'/></a> : null}
+                  {this.state.exerciseTab === 3 ? <a href={PressImage}><img src={PressImage} className='exerciseImage' alt='How to do Press'/></a> : null}
+                  {this.state.exerciseTab === 4 ? <a href={CleanImage}><img src={CleanImage} className='exerciseImage' alt='How to do Power Clean'/></a> : null}
+                  {this.state.exerciseTab === 5 ? <a href={SnatchImage}><img src={SnatchImage} className='exerciseImage' alt='How to do Power Snatch'/></a>: null}
                 </div>
               </div>
             </div>
